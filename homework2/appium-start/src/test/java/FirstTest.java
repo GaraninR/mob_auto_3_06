@@ -3,7 +3,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -33,12 +32,8 @@ public class FirstTest {
             e.printStackTrace();
         }
 
-        WebDriverWait webDriverWait;
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-        MobileElement elementByXpath = (MobileElement) driver.findElementByXPath("//android.widget.TextView[@resource-id='com.jayway.contacts:id/name']");
-
 
         ArrayList<MobileElement> elements = (ArrayList<MobileElement>) driver.findElements(By.xpath("//android.widget.TextView[@resource-id='com.jayway.contacts:id/name']"));
 
